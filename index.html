@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-4">Login</h1>
+        <form onsubmit="login(event)">
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600">Login</button>
+        </form>
+
+        <!-- Add a button to download the secret messenger -->
+        <a href="https://files.appsgeyser.com/SECRET%20WHATSAPP_17716535.apk?src=page&_ga=2.97347231.1868627945.1698511396-1071877546.1698511396&_gl=1*1pxd3ml*_ga*MTA3MTg3NzU0Ni4xNjk4NTExMzk2*_ga_WRFFFBGC4Z*MTY5ODUxMTM5NS4xLjEuMTY5ODUxMTcyNy40MC4wLjA."
+         download="SecretMessenger.apk" class="block mt-4 text-blue-600 hover:underline">
+            Download Secret Messenger <img src="press releas 1.png" alt="WhatsApp Logo" class="h-6 inline-block ml-2">
+        </a>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                // Redirect to the website (replace with the actual URL)
+                window.location.href = "new.html";
+            } else {
+                // Display an alert for wrong credentials
+                alert("Wrong username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
